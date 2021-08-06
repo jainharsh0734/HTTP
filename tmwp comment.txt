@@ -1,0 +1,29 @@
+/*
+ code to create object of Request class (you will have create class request it should act wrapper to
+ structure created  from REQUEST whose address in pointer named as request and methods through
+ which information from request structure can be extreacted
+ It should also act as wrapper to dataCount and data
+ And it should should have methods to extract data by name
+ get("nm"),if nm does not exist then  return empty String
+ 
+ code to create an object of Response class named as rs(You will have to create class wrap the necesssary parts
+ in response object so that the writer method of the response class should be capable of
+ sending response to client
+ The close method of the response class should end the connection)
+ 
+ Change the following line
+ this->ptrOnRequest(request->dataCount,request->data);
+ it should now be
+ this->ptrOnRequest(rq,rs);
+)
+*/
+//check if request object contains anything property that got set because of call to forward
+//if yes the reprocess as if the request has arrived for the vale of the property that got set because of call to forward method.
+/*this is useless not required anymore
+ printf("Sending processed page\n");
+ char tmp[501];
+ sprintf(tmp,"<DOCTYPE HTML><html lang='en'><head><meta charset='utf-8'><title>TM WEB PROJECTOR</title></head><body><h2 style='color:red'>Resource /%s processed</h2></body></html>",request->resource);
+ sprintf(responseBuffer,"HTTP/1.1 200 OK\nContent-Type:text/html\nContent-Length:%d\nConnection:  close\n\n",strlen(tmp));
+ strcat(responseBuffer,tmp);
+ send(clientSocketDescriptor,responseBuffer,strlen(responseBuffer),0); 
+*/
